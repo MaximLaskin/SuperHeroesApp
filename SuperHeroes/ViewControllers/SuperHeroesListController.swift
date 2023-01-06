@@ -9,14 +9,16 @@ import UIKit
 
 final class SuperHeroesListController: UICollectionViewController {
 
+    // MARK: Private Properties
     private var superHeroes: [Superhero] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchSuperHeroes()
+
     }
 
-// MARK: UICollectionViewDataSource
+    // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         superHeroes.count
     }
@@ -40,6 +42,13 @@ final class SuperHeroesListController: UICollectionViewController {
             }
         }
 
+    }
+}
+
+extension SuperHeroesListController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: UIScreen.main.bounds.width - 40, height: 500)
     }
 }
 

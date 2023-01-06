@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430A806C2968728D00531E34 /* BackgroundGradient+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A806B2968728D00531E34 /* BackgroundGradient+.swift */; };
+		430A806E2968738A00531E34 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A806D2968738A00531E34 /* DetailsViewController.swift */; };
 		430E2469294C7AA000FB4B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2468294C7AA000FB4B7F /* AppDelegate.swift */; };
 		430E246B294C7AA000FB4B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E246A294C7AA000FB4B7F /* SceneDelegate.swift */; };
 		430E246D294C7AA000FB4B7F /* SuperHeroesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E246C294C7AA000FB4B7F /* SuperHeroesListController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430A806B2968728D00531E34 /* BackgroundGradient+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackgroundGradient+.swift"; sourceTree = "<group>"; };
+		430A806D2968738A00531E34 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		430E2465294C7AA000FB4B7F /* SuperHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E2468294C7AA000FB4B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E246A294C7AA000FB4B7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430A806A2968725000531E34 /* Extencions */ = {
+			isa = PBXGroup;
+			children = (
+				430A806B2968728D00531E34 /* BackgroundGradient+.swift */,
+			);
+			path = Extencions;
+			sourceTree = "<group>";
+		};
 		430E245C294C7AA000FB4B7F = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 				430E2487294CAF9800FB4B7F /* Views */,
 				430E2482294C806500FB4B7F /* Models */,
 				430E2483294C815A00FB4B7F /* NetworkManager.swift */,
+				430A806A2968725000531E34 /* Extencions */,
 			);
 			path = SuperHeroes;
 			sourceTree = "<group>";
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				430E246C294C7AA000FB4B7F /* SuperHeroesListController.swift */,
+				430A806D2968738A00531E34 /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -197,6 +211,8 @@
 			files = (
 				430E246D294C7AA000FB4B7F /* SuperHeroesListController.swift in Sources */,
 				430E2481294C7CA600FB4B7F /* SuperHero.swift in Sources */,
+				430A806C2968728D00531E34 /* BackgroundGradient+.swift in Sources */,
+				430A806E2968738A00531E34 /* DetailsViewController.swift in Sources */,
 				430E2484294C815A00FB4B7F /* NetworkManager.swift in Sources */,
 				430E2469294C7AA000FB4B7F /* AppDelegate.swift in Sources */,
 				430E2486294CAF9000FB4B7F /* HeroCollectionViewCell.swift in Sources */,

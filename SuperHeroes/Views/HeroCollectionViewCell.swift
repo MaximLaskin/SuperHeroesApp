@@ -7,7 +7,8 @@
 
 import UIKit
 
-class HeroCollectionViewCell: UICollectionViewCell {
+final class HeroCollectionViewCell: UICollectionViewCell {
+    // MARK: - IBOutlets
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLamel: UILabel!
 
@@ -31,10 +32,9 @@ class HeroCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    
     private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.color = .white
+        activityIndicator.color = .black
         activityIndicator.startAnimating()
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true

@@ -30,6 +30,15 @@ final class SuperHeroesListController: UICollectionViewController {
         return cell
     }
 
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let superHeroe = superHeroes[indexPath.item]
+//
+//        performSegue(withIdentifier: "details", sender: nil)
+//    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let
+//    }
     
     private func fetchSuperHeroes() {
         NetworkManager.shared.fetchData { result in

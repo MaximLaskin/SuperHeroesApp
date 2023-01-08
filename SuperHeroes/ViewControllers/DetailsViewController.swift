@@ -8,10 +8,22 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+// MARK: - IBOutlets
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+
+    var superHeroes: Superhero!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        nameLabel.text = superHeroes.name
 
     }
+}
+
+// MARK: - Networking
+
+extension DetailsViewController {
+    
 }

@@ -9,7 +9,6 @@ import UIKit
 
 final class StartViewController: UIViewController {
     // MARK: - IBOutlets
-
     @IBOutlet var versionAppLabel: UILabel!
     @IBOutlet var showButton: UIButton!
 

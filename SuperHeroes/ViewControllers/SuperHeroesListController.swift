@@ -50,14 +50,13 @@ final class SuperHeroesListController: UICollectionViewController {
                 print(error)
             }
         }
-
     }
 }
-
-extension SuperHeroesListController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 40, height: 500)
-    }
-}
+//
+//extension SuperHeroesListController: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        CGSize(width: UIScreen.main.bounds.width - 40, height: 500)
+//    }
+//}
 

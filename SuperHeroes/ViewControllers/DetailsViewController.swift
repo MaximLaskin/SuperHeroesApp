@@ -16,9 +16,6 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        nameLabel.text = superHeroes.name
-
     }
 }
 

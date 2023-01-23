@@ -9,24 +9,27 @@ import UIKit
 
 final class SuperHeroesListController: UICollectionViewController {
 
-    // MARK: Private Properties
+    // MARK: - Private Properties
     private var superHeroes: [Superhero] = []
 
+    // MARK: - LifeCicle View
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchSuperHeroes()
-
     }
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         superHeroes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HeroCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? HeroCollectionViewCell
+        else { return UICollectionViewCell() }
+        
         let superhero = superHeroes[indexPath.row]
         cell.configure(with: superhero)
+
         return cell
     }
 
@@ -36,10 +39,6 @@ final class SuperHeroesListController: UICollectionViewController {
 //        performSegue(withIdentifier: "details", sender: nil)
 //    }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let
-//    }
-    
     private func fetchSuperHeroes() {
         NetworkManager.shared.fetchData { result in
             switch result {
@@ -52,11 +51,10 @@ final class SuperHeroesListController: UICollectionViewController {
         }
     }
 }
-//
-//extension SuperHeroesListController: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        CGSize(width: UIScreen.main.bounds.width - 40, height: 500)
-//    }
-//}
+
+extension SuperHeroesListController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: UIScreen.main.bounds.width - 40, height: 400)
+    }
+}
 

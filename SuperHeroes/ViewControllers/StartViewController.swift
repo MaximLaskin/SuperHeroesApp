@@ -15,7 +15,7 @@ final class StartViewController: UIViewController {
     // MARK: - Private properties
     private var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
-    // MARK: - Live cycles
+    // MARK: - LifeCicle View
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

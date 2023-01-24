@@ -16,11 +16,16 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 }
 
 // MARK: - Networking
 
 extension DetailsViewController {
-    
+    func fetchSuperHeroes() {
+        NetworkManager.shared.fetchData { <#Result<[Superhero], NetworkError>#> in
+            <#code#>
+        }
+    }
 }

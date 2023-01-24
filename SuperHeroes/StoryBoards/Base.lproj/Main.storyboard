@@ -70,7 +70,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Im5-xx-r2K"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="jdR-yo-CoY" kind="show" id="jGf-u5-jlV"/>
+                        <segue destination="jdR-yo-CoY" kind="show" identifier="showDetails" id="jGf-u5-jlV"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRB-pI-96s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

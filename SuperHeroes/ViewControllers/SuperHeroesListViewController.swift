@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SuperHeroesListViewController: UITableViewController {
+final class SuperHeroesListViewController: UITableViewController {
     // MARK: - Private Properties
     private var superHeroes: [Superhero] = []
 
@@ -22,7 +22,7 @@ class SuperHeroesListViewController: UITableViewController {
     // MARK: - Table view data source
 
 
-
+//
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         superHeroes.count
     }

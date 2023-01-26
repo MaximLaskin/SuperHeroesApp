@@ -5,120 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SuperHeroes-->
-        <scene sceneID="5ig-C2-iCT">
-            <objects>
-                <collectionViewController id="5SW-4w-ERM" customClass="SuperHeroesListController" customModule="SuperHeroes" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="djB-pm-x7M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XdN-6s-tif">
-                            <size key="itemSize" width="375" height="437"/>
-                            <size key="estimatedItemSize" width="160" height="260"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="lY7-Ju-opy" customClass="HeroCollectionViewCell" customModule="SuperHeroes" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="0.0" width="375" height="437"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AyJ-1u-zCl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw2-5o-K4f">
-                                            <rect key="frame" x="166.5" y="301" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-QX-rUd">
-                                            <rect key="frame" x="16" y="20" width="343" height="251"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="g6u-QX-rUd" secondAttribute="height" multiplier="343:251" id="Z1x-HM-Eqa"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="g6u-QX-rUd" secondAttribute="trailing" constant="16" id="DiG-5m-O7H"/>
-                                        <constraint firstItem="g6u-QX-rUd" firstAttribute="top" secondItem="AyJ-1u-zCl" secondAttribute="top" constant="20" id="EwW-6P-LKg"/>
-                                        <constraint firstItem="Uw2-5o-K4f" firstAttribute="top" secondItem="g6u-QX-rUd" secondAttribute="bottom" constant="30" id="Jur-Wg-8qp"/>
-                                        <constraint firstItem="g6u-QX-rUd" firstAttribute="leading" secondItem="AyJ-1u-zCl" secondAttribute="leading" constant="16" id="bMA-BI-e36"/>
-                                        <constraint firstItem="g6u-QX-rUd" firstAttribute="centerX" secondItem="AyJ-1u-zCl" secondAttribute="centerX" id="hFJ-HP-aiT"/>
-                                        <constraint firstItem="Uw2-5o-K4f" firstAttribute="centerX" secondItem="AyJ-1u-zCl" secondAttribute="centerX" id="hN3-md-sfC"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="375" height="437"/>
-                                <connections>
-                                    <outlet property="imageView" destination="g6u-QX-rUd" id="efT-R7-URu"/>
-                                    <outlet property="nameLamel" destination="Uw2-5o-K4f" id="uqd-Ks-bIX"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="5SW-4w-ERM" id="ujC-bb-QJG"/>
-                            <outlet property="delegate" destination="5SW-4w-ERM" id="frR-in-i5g"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="SuperHeroes" id="1Xb-oi-cVb">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Im5-xx-r2K"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="jdR-yo-CoY" kind="show" identifier="showDetails" id="jGf-u5-jlV"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oRB-pI-96s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="254" y="31"/>
-        </scene>
-        <!--Details View Controller-->
-        <scene sceneID="vxR-gw-dli">
-            <objects>
-                <viewController id="jdR-yo-CoY" customClass="DetailsViewController" customModule="SuperHeroes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tlg-C4-q4e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2N7-Tk-Dg2">
-                                <rect key="frame" x="10" y="98" width="394" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="m5h-7Z-yxi"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIj-Bj-rxD">
-                                <rect key="frame" x="186" y="297" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1Cd-S7-SHj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="2N7-Tk-Dg2" firstAttribute="centerX" secondItem="tlg-C4-q4e" secondAttribute="centerX" id="LlW-iR-JAr"/>
-                            <constraint firstItem="PIj-Bj-rxD" firstAttribute="top" secondItem="2N7-Tk-Dg2" secondAttribute="bottom" constant="71" id="b0j-gq-PDF"/>
-                            <constraint firstItem="2N7-Tk-Dg2" firstAttribute="leading" secondItem="1Cd-S7-SHj" secondAttribute="leading" constant="10" id="b6r-VU-M9f"/>
-                            <constraint firstItem="1Cd-S7-SHj" firstAttribute="trailing" secondItem="2N7-Tk-Dg2" secondAttribute="trailing" constant="10" id="ctK-Ur-ntG"/>
-                            <constraint firstItem="PIj-Bj-rxD" firstAttribute="centerX" secondItem="tlg-C4-q4e" secondAttribute="centerX" id="cwn-Xg-0di"/>
-                            <constraint firstItem="2N7-Tk-Dg2" firstAttribute="top" secondItem="1Cd-S7-SHj" secondAttribute="top" constant="10" id="i3h-N2-8xE"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ycy-8T-Rzg"/>
-                    <connections>
-                        <outlet property="imageView" destination="2N7-Tk-Dg2" id="F99-dn-L4c"/>
-                        <outlet property="nameLabel" destination="PIj-Bj-rxD" id="OMw-sA-VJw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UU7-fu-8k2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1074" y="31"/>
-        </scene>
         <!--Start View Controller-->
         <scene sceneID="WwC-Ep-Fq2">
             <objects>
@@ -143,7 +32,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="dvs-vY-nPq" kind="presentation" modalPresentationStyle="fullScreen" id="4gG-Aw-8Nf"/>
+                                    <segue destination="38l-vf-z64" kind="presentation" modalPresentationStyle="fullScreen" id="UeL-5B-KjI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-9Z-ze2">
@@ -171,24 +60,80 @@
             </objects>
             <point key="canvasLocation" x="-1394.2028985507247" y="30.803571428571427"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Rc-0o-yy9">
+        <!--SuperHeroes-->
+        <scene sceneID="IBQ-SO-pcF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dvs-vY-nPq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="CzK-MA-pYQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KCx-yV-YUr">
+                <tableViewController id="Ift-tU-4a1" customClass="SuperHeroesListViewController" customModule="SuperHeroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rk9-Ea-uJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LZj-Hu-VOd" customClass="HeroTableViewCell" customModule="SuperHeroes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LZj-Hu-VOd" id="tQe-FJ-GJi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-ex-cyR">
+                                            <rect key="frame" x="16" y="5" width="50" height="50.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="0vC-1G-PRX"/>
+                                                <constraint firstAttribute="height" constant="50" id="PGb-8J-h7w"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E84-UB-Ott">
+                                            <rect key="frame" x="76" y="20" width="302" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="E84-UB-Ott" firstAttribute="top" secondItem="tQe-FJ-GJi" secondAttribute="topMargin" constant="9" id="1RT-0G-vaA"/>
+                                        <constraint firstItem="E84-UB-Ott" firstAttribute="centerY" secondItem="tQe-FJ-GJi" secondAttribute="centerY" id="8FL-Lb-UxP"/>
+                                        <constraint firstItem="Gey-ex-cyR" firstAttribute="top" secondItem="tQe-FJ-GJi" secondAttribute="top" constant="5" id="JLA-5R-NON"/>
+                                        <constraint firstItem="Gey-ex-cyR" firstAttribute="leading" secondItem="tQe-FJ-GJi" secondAttribute="leading" constant="16" id="c7x-Mv-kpc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="E84-UB-Ott" secondAttribute="trailing" constant="16" id="cWd-QI-2N3"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gey-ex-cyR" secondAttribute="bottom" constant="5" id="kUs-7q-DrX"/>
+                                        <constraint firstItem="E84-UB-Ott" firstAttribute="leading" secondItem="Gey-ex-cyR" secondAttribute="trailing" constant="10" id="u2g-ps-lny"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="Gey-ex-cyR" id="BGf-Ew-2jF"/>
+                                    <outlet property="nameLabel" destination="E84-UB-Ott" id="gWL-6i-3hy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ift-tU-4a1" id="jCf-3y-yql"/>
+                            <outlet property="delegate" destination="Ift-tU-4a1" id="swt-dN-Wec"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SuperHeroes" id="suU-Vf-6fB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBN-Wp-Zxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="31"/>
+        </scene>
+        <!--SuperHeroes-->
+        <scene sceneID="TmZ-Lw-En2">
+            <objects>
+                <navigationController id="38l-vf-z64" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="SuperHeroes" id="l1d-4C-WCe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AiU-WJ-44V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5SW-4w-ERM" kind="relationship" relationship="rootViewController" id="L34-vw-7gi"/>
+                        <segue destination="Ift-tU-4a1" kind="relationship" relationship="rootViewController" id="dCn-Gg-4Ye"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="abB-JD-4az" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywo-dR-qlr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-565" y="31"/>
+            <point key="canvasLocation" x="-588" y="31"/>
         </scene>
     </scenes>
     <resources>

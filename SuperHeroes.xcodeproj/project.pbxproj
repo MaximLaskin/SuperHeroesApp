@@ -8,34 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		430A806C2968728D00531E34 /* BackgroundGradient+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A806B2968728D00531E34 /* BackgroundGradient+.swift */; };
-		430A806E2968738A00531E34 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A806D2968738A00531E34 /* DetailsViewController.swift */; };
 		430A8070296AC27800531E34 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A806F296AC27800531E34 /* StartViewController.swift */; };
 		430E2469294C7AA000FB4B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2468294C7AA000FB4B7F /* AppDelegate.swift */; };
 		430E246B294C7AA000FB4B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E246A294C7AA000FB4B7F /* SceneDelegate.swift */; };
-		430E246D294C7AA000FB4B7F /* SuperHeroesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E246C294C7AA000FB4B7F /* SuperHeroesListController.swift */; };
 		430E2470294C7AA000FB4B7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E246E294C7AA000FB4B7F /* Main.storyboard */; };
 		430E2472294C7AA200FB4B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430E2471294C7AA200FB4B7F /* Assets.xcassets */; };
 		430E2475294C7AA200FB4B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430E2473294C7AA200FB4B7F /* LaunchScreen.storyboard */; };
 		430E2481294C7CA600FB4B7F /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2480294C7CA600FB4B7F /* SuperHero.swift */; };
 		430E2484294C815A00FB4B7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2483294C815A00FB4B7F /* NetworkManager.swift */; };
-		430E2486294CAF9000FB4B7F /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2485294CAF9000FB4B7F /* HeroCollectionViewCell.swift */; };
+		43B66644298265AC00B81AA6 /* SuperHeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B66643298265AC00B81AA6 /* SuperHeroesListViewController.swift */; };
+		43B666462982674500B81AA6 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B666452982674500B81AA6 /* HeroTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		430A806B2968728D00531E34 /* BackgroundGradient+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackgroundGradient+.swift"; sourceTree = "<group>"; };
-		430A806D2968738A00531E34 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		430A806F296AC27800531E34 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		430E2465294C7AA000FB4B7F /* SuperHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E2468294C7AA000FB4B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430E246A294C7AA000FB4B7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		430E246C294C7AA000FB4B7F /* SuperHeroesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesListController.swift; sourceTree = "<group>"; };
 		430E246F294C7AA000FB4B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		430E2471294C7AA200FB4B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430E2474294C7AA200FB4B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430E2476294C7AA200FB4B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430E2480294C7CA600FB4B7F /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		430E2483294C815A00FB4B7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		430E2485294CAF9000FB4B7F /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		43B66643298265AC00B81AA6 /* SuperHeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesListViewController.swift; sourceTree = "<group>"; };
+		43B666452982674500B81AA6 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +99,8 @@
 		430E247D294C7AC500FB4B7F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				430E246C294C7AA000FB4B7F /* SuperHeroesListController.swift */,
-				430A806D2968738A00531E34 /* DetailsViewController.swift */,
 				430A806F296AC27800531E34 /* StartViewController.swift */,
+				43B66643298265AC00B81AA6 /* SuperHeroesListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,7 +133,7 @@
 		430E2487294CAF9800FB4B7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				430E2485294CAF9000FB4B7F /* HeroCollectionViewCell.swift */,
+				43B666452982674500B81AA6 /* HeroTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,14 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430E246D294C7AA000FB4B7F /* SuperHeroesListController.swift in Sources */,
+				43B66644298265AC00B81AA6 /* SuperHeroesListViewController.swift in Sources */,
 				430E2481294C7CA600FB4B7F /* SuperHero.swift in Sources */,
+				43B666462982674500B81AA6 /* HeroTableViewCell.swift in Sources */,
 				430A806C2968728D00531E34 /* BackgroundGradient+.swift in Sources */,
-				430A806E2968738A00531E34 /* DetailsViewController.swift in Sources */,
 				430E2484294C815A00FB4B7F /* NetworkManager.swift in Sources */,
 				430A8070296AC27800531E34 /* StartViewController.swift in Sources */,
 				430E2469294C7AA000FB4B7F /* AppDelegate.swift in Sources */,
-				430E2486294CAF9000FB4B7F /* HeroCollectionViewCell.swift in Sources */,
 				430E246B294C7AA000FB4B7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

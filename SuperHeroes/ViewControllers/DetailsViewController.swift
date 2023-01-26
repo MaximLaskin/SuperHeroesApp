@@ -16,7 +16,7 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameLabel.text = superHeroes.name
     }
 }
 
@@ -24,8 +24,5 @@ class DetailsViewController: UIViewController {
 
 extension DetailsViewController {
     func fetchSuperHeroes() {
-        NetworkManager.shared.fetchData { <#Result<[Superhero], NetworkError>#> in
-            <#code#>
-        }
     }
 }

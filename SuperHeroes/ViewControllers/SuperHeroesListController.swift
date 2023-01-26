@@ -36,16 +36,16 @@ final class SuperHeroesListController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let superHeroe = superHeroes[indexPath.item]
 
-        performSegue(withIdentifier: "showDetails", sender: nil)
+//        performSegue(withIdentifier: "showDetails", sender: nil)
     }
 
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            guard let detailsVC = segue.destination as? DetailsViewController else { return }
-            detailsVC.fetchSuperHeroes()
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetails" {
+//            guard let detailsVC = segue.destination as? DetailsViewController else { return }
+//            detailsVC.fetchSuperHeroes()
+//        }
+//    }
 
     // MARK: - Networking
     private func fetchSuperHeroes() {

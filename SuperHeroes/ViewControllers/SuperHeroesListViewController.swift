@@ -14,19 +14,17 @@ final class SuperHeroesListViewController: UITableViewController {
     // MARK: - LifeCicle View
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.rowHeight = 70
+        tableView.rowHeight = 100
         view.backgroundColor = .black
         fetchSuperheroes()
+//        setupRefreshControl()
     }
 
     // MARK: - Table view data source
-
-
-//
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         superHeroes.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HeroTableViewCell else { return UITableViewCell() }
@@ -47,7 +45,13 @@ final class SuperHeroesListViewController: UITableViewController {
     }
     */
 
-    private func fetchSuperheroes() {
+//    private func setupRefreshControl() {
+//        refreshControl = UIRefreshControl()
+//        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+//        refreshControl?.addTarget(self, action: #selector(fetchSuperheroes), for: .valueChanged)
+//    }
+
+     private func fetchSuperheroes() {
         NetworkManager.shared.fetchData { result in // получили массив result, который должны передать в superheroes
             switch result {
             case .success(let superHeroes):

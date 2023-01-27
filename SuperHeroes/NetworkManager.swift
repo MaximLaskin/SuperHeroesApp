@@ -35,7 +35,7 @@ class NetworkManager {
             do {
                 let superheroes = try JSONDecoder().decode([Superhero].self, from: data)
                 DispatchQueue.main.async {
-                    completion(.success(superheroes))
+                    completion(.success(superheroes.shuffled()))
                 }
             } catch {
                 completion(.failure(.decodingError))
@@ -48,7 +48,7 @@ class NetworkManager {
             completion(.failure(.invalidURL))
             return
         }
-        DispatchQueue.global().async { //обращаемся чтобы асинхронно
+        DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: url) else {
                 completion(.failure(.noData))
                 return

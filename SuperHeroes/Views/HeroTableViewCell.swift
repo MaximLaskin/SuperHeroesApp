@@ -10,15 +10,19 @@ import UIKit
 final class HeroTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
 
-    @IBOutlet var heroImageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel! {
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var publisherLabel: UILabel!
+
+    @IBOutlet var heroImageView: UIImageView! {
         didSet {
             heroImageView.contentMode = .scaleAspectFill
             heroImageView.clipsToBounds = true
-            heroImageView.layer.cornerRadius = heroImageView.frame.height / 2
-            heroImageView.backgroundColor = .white
+            heroImageView.layer.cornerRadius = 10
+            heroImageView.backgroundColor = .black
         }
     }
+
+
 
     private var imageURL: URL? {
         didSet {
@@ -37,6 +41,7 @@ final class HeroTableViewCell: UITableViewCell {
     // MARK: - Public methods
     func configure(with superHero: Superhero) {
         nameLabel.text = superHero.name
+        publisherLabel.text = superHero.biography.publisher
 
         imageURL = URL(string: superHero.images.lg)
     }

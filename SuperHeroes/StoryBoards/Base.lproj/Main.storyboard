@@ -78,7 +78,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="yNW-Kf-y0L">
-                                            <rect key="frame" x="10" y="5" width="150.5" height="90"/>
+                                            <rect key="frame" x="10" y="5" width="178" height="90"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-ex-cyR">
                                                     <rect key="frame" x="0.0" y="-3" width="90" height="96"/>
@@ -89,12 +89,23 @@
                                                     </constraints>
                                                     <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E84-UB-Ott">
-                                                    <rect key="frame" x="109" y="0.0" width="41.5" height="90"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-13" translatesAutoresizingMaskIntoConstraints="NO" id="dtE-tv-2ke">
+                                                    <rect key="frame" x="109" y="0.0" width="69" height="90"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E84-UB-Ott">
+                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="51.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publisher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wm-sY-tbt">
+                                                            <rect key="frame" x="0.0" y="38.5" width="69" height="51.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -109,6 +120,7 @@
                                 <connections>
                                     <outlet property="heroImageView" destination="Gey-ex-cyR" id="mRI-9j-nZl"/>
                                     <outlet property="nameLabel" destination="E84-UB-Ott" id="gWL-6i-3hy"/>
+                                    <outlet property="publisherLabel" destination="7Wm-sY-tbt" id="fwI-pd-zzO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -20,6 +20,13 @@ final class HeroTableViewCell: UITableViewCell {
         }
     }
 
+    private var imageURL: URL? {
+        didSet {
+            heroImageView.image = UIImage(named: "logo")
+            updateImage() // обновляем интерфейс, добавляем последнюю загружаемую.
+        }
+    }
+
     private var activityIndicator: UIActivityIndicatorView?
 
     override func awakeFromNib() { // подобие viewDidLoad, но в ячейке.
@@ -29,17 +36,22 @@ final class HeroTableViewCell: UITableViewCell {
     }
 
     // MARK: - Public methods
-    func configure(with superHero: Superhero?) {
-        nameLabel.text = superHero?.name
+    func configure(with superHero: Superhero) {
+        nameLabel.text = superHero.name
 
-        NetworkManager.shared.fetchImage(from: superHero?.images.lg) { [weak self] result in
-            switch result {
-            case .success(let imageData):
-                self?.activityIndicator?.stopAnimating()
-                self?.heroImageView.image = UIImage(data: imageData)
+        imageURL = URL(string: superHero.images.lg) 
 
-            case .failure(let error):
-                print(error)
+    }
+
+    private func updateImage() {
+        guard let url = imageURL else { return }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                if url == self.imageURL {
+                    self.activityIndicator?.stopAnimating()
+                    self.heroImageView.image = UIImage(data: imageData)
+                }
             }
         }
     }

@@ -35,15 +35,13 @@ final class SuperHeroesListViewController: UITableViewController {
         return cell
     }
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//
     }
-    */
+
 
 //    private func setupRefreshControl() {
 //        refreshControl = UIRefreshControl()
@@ -52,7 +50,7 @@ final class SuperHeroesListViewController: UITableViewController {
 //    }
 
      private func fetchSuperheroes() {
-        NetworkManager.shared.fetchData { result in // получили массив result, который должны передать в superheroes
+        NetworkManager.shared.fetchData { result in
             switch result {
             case .success(let superHeroes):
                 self.superHeroes = superHeroes

@@ -23,26 +23,25 @@ final class HeroTableViewCell: UITableViewCell {
     private var imageURL: URL? {
         didSet {
             heroImageView.image = UIImage(named: "logo")
-            updateImage() // обновляем интерфейс, добавляем последнюю загружаемую.
+            updateImage()
         }
     }
-
+    // MARK: - Private Properties
     private var activityIndicator: UIActivityIndicatorView?
 
-    override func awakeFromNib() { // подобие viewDidLoad, но в ячейке.
+    override func awakeFromNib() {
         super.awakeFromNib()
         activityIndicator = showSpinner(in: heroImageView)
-
     }
 
     // MARK: - Public methods
     func configure(with superHero: Superhero) {
         nameLabel.text = superHero.name
 
-        imageURL = URL(string: superHero.images.lg) 
-
+        imageURL = URL(string: superHero.images.lg)
     }
 
+    // MARK: - Private methods
     private func updateImage() {
         guard let url = imageURL else { return }
         getImage(from: url) { [unowned self] result in
@@ -75,7 +74,7 @@ final class HeroTableViewCell: UITableViewCell {
         }
 
     }
-
+    
     private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.color = .white // цвет

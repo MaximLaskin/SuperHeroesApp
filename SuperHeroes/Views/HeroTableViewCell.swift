@@ -45,15 +45,35 @@ final class HeroTableViewCell: UITableViewCell {
 
     private func updateImage() {
         guard let url = imageURL else { return }
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            DispatchQueue.main.async {
+        getImage(from: url) { [unowned self] result in
+            switch result {
+            case .success(let image):
                 if url == self.imageURL {
+                    self.heroImageView.image = image
                     self.activityIndicator?.stopAnimating()
-                    self.heroImageView.image = UIImage(data: imageData)
                 }
+            case .failure(let error):
+                print(error)
             }
         }
+    }
+
+    private func getImage(from url: URL, completion: @escaping(Result<UIImage, Error>) -> Void) {
+        if let cachedImage = ImageCache.shared.object(forKey: url.lastPathComponent as NSString) {
+            completion(.success(cachedImage))
+            return
+        }
+        NetworkManager.shared.fetchImage(from: url) { result in
+            switch result {
+            case .success(let data):
+                guard let image = UIImage(data: data) else { return }
+                ImageCache.shared.setObject(image, forKey: url.lastPathComponent as NSString)
+                completion(.success(image))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+
     }
 
     private func showSpinner(in view: UIView) -> UIActivityIndicatorView {

@@ -18,6 +18,7 @@
 		430E2484294C815A00FB4B7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430E2483294C815A00FB4B7F /* NetworkManager.swift */; };
 		43B66644298265AC00B81AA6 /* SuperHeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B66643298265AC00B81AA6 /* SuperHeroesListViewController.swift */; };
 		43B666462982674500B81AA6 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B666452982674500B81AA6 /* HeroTableViewCell.swift */; };
+		43F5ABAA298424E600BC398F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5ABA9298424E600BC398F /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		430E2483294C815A00FB4B7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		43B66643298265AC00B81AA6 /* SuperHeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesListViewController.swift; sourceTree = "<group>"; };
 		43B666452982674500B81AA6 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		43F5ABA9298424E600BC398F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 				430E247F294C7AF200FB4B7F /* Resources */,
 				430E2487294CAF9800FB4B7F /* Views */,
 				430E2482294C806500FB4B7F /* Models */,
-				430E2483294C815A00FB4B7F /* NetworkManager.swift */,
+				43F5ABA8298424C200BC398F /* Services */,
 				430A806A2968725000531E34 /* Extencions */,
 			);
 			path = SuperHeroes;
@@ -136,6 +138,15 @@
 				43B666452982674500B81AA6 /* HeroTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		43F5ABA8298424C200BC398F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				430E2483294C815A00FB4B7F /* NetworkManager.swift */,
+				43F5ABA9298424E600BC398F /* ImageCache.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				43B66644298265AC00B81AA6 /* SuperHeroesListViewController.swift in Sources */,
 				430E2481294C7CA600FB4B7F /* SuperHero.swift in Sources */,
 				43B666462982674500B81AA6 /* HeroTableViewCell.swift in Sources */,
+				43F5ABAA298424E600BC398F /* ImageCache.swift in Sources */,
 				430A806C2968728D00531E34 /* BackgroundGradient+.swift in Sources */,
 				430E2484294C815A00FB4B7F /* NetworkManager.swift in Sources */,
 				430A8070296AC27800531E34 /* StartViewController.swift in Sources */,

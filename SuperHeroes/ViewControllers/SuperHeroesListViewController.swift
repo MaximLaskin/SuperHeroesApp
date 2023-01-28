@@ -39,7 +39,9 @@ final class SuperHeroesListViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
+        detailsVC.superHero = superHeroes[indexPath.row]
     }
 
 

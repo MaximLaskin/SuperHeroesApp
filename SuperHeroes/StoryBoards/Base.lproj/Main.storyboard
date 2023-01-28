@@ -82,7 +82,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-ex-cyR">
                                                     <rect key="frame" x="0.0" y="-3" width="90" height="96"/>
-                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" systemColor="linkColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Gey-ex-cyR" secondAttribute="height" multiplier="1:1" id="QkV-Wc-2m5"/>
@@ -121,6 +121,7 @@
                                     <outlet property="heroImageView" destination="Gey-ex-cyR" id="mRI-9j-nZl"/>
                                     <outlet property="nameLabel" destination="E84-UB-Ott" id="gWL-6i-3hy"/>
                                     <outlet property="publisherLabel" destination="7Wm-sY-tbt" id="fwI-pd-zzO"/>
+                                    <segue destination="0Jj-uR-T7t" kind="show" id="aUI-ZH-aqY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,11 +130,69 @@
                             <outlet property="delegate" destination="Ift-tU-4a1" id="swt-dN-Wec"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SuperHeroes" id="suU-Vf-6fB"/>
+                    <navigationItem key="navigationItem" title="SuperHeroes" id="suU-Vf-6fB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Vhs-Bf-fbu"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBN-Wp-Zxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1208.6956521739132" y="30.803571428571427"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="g3o-66-m8m">
+            <objects>
+                <viewController id="0Jj-uR-T7t" customClass="DetailsViewController" customModule="SuperHeroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSs-pW-CFU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-vF-u8h">
+                                <rect key="frame" x="87" y="170" width="240" height="349"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" image="batman3" translatesAutoresizingMaskIntoConstraints="NO" id="cro-uZ-kI8">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="231"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cro-uZ-kI8" secondAttribute="height" multiplier="80:77" id="cWc-6x-UHN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="0fH-Dp-cOQ">
+                                        <rect key="frame" x="84.5" y="271" width="71.5" height="78"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FullName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4E-jB-469">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFG-RZ-B0i">
+                                                <rect key="frame" x="15" y="57.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="feK-S5-3WT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8E7-vF-u8h" firstAttribute="top" secondItem="feK-S5-3WT" secondAttribute="top" constant="30" id="04J-L1-ugn"/>
+                            <constraint firstItem="8E7-vF-u8h" firstAttribute="centerX" secondItem="eSs-pW-CFU" secondAttribute="centerX" id="Nkb-UL-9c0"/>
+                            <constraint firstItem="8E7-vF-u8h" firstAttribute="width" secondItem="eSs-pW-CFU" secondAttribute="width" multiplier="0.57971" id="fAt-BZ-U1V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ntu-VM-O8N"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="f4E-jB-469" id="zfX-sy-S4r"/>
+                        <outlet property="imageView" destination="cro-uZ-kI8" id="KxJ-XA-Kpn"/>
+                        <outlet property="placeOfBirthLabel" destination="fFG-RZ-B0i" id="Gcd-rD-ZL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PL-YF-T5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105.7971014492755" y="30.803571428571427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rDL-Z3-uo8">
@@ -155,10 +214,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="batman3" width="600" height="600"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

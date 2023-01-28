@@ -21,17 +21,16 @@ final class HeroTableViewCell: UITableViewCell {
             heroImageView.backgroundColor = .black
         }
     }
+    // MARK: - Private Properties
 
-
+    private var activityIndicator: UIActivityIndicatorView?
 
     private var imageURL: URL? {
         didSet {
-            heroImageView.image = UIImage(named: "logo")
+            heroImageView.image = UIImage(named: "batman_2")
             updateImage()
         }
     }
-    // MARK: - Private Properties
-    private var activityIndicator: UIActivityIndicatorView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +47,7 @@ final class HeroTableViewCell: UITableViewCell {
 
     // MARK: - Private methods
     private func updateImage() {
+        activityIndicator?.startAnimating()
         guard let url = imageURL else { return }
         getImage(from: url) { [unowned self] result in
             switch result {
@@ -77,18 +77,5 @@ final class HeroTableViewCell: UITableViewCell {
                 completion(.failure(error))
             }
         }
-
-    }
-    
-    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.color = .white // цвет
-        activityIndicator.startAnimating()
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-
-        view.addSubview(activityIndicator)
-
-        return activityIndicator
     }
 }

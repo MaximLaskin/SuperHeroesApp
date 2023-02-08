@@ -20,10 +20,21 @@ final class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-
-        fullNameLabel.text = superHero.biography.fullName
-        placeOfBirthLabel.text = superHero.biography.placeOfBirth
+        title = superHero.name
         
+        if superHero.biography.fullName != "" {
+            fullNameLabel.text = superHero.biography.fullName
+        } else {
+            fullNameLabel.text = superHero.name
+        }
+
+
+        if superHero.biography.placeOfBirth != "-" {
+            placeOfBirthLabel.text = superHero.biography.placeOfBirth
+        } else {
+            placeOfBirthLabel.text = "unknow"
+        }
+
         activityIndicator = showSpinner(in: imageView)
         fetchImage()
     }

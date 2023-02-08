@@ -37,7 +37,7 @@ enum Gender: String, Codable {
 struct Biography: Codable {
     let fullName, alterEgos: String
     let aliases: [String]
-    let placeOfBirth, firstAppearance: String
+    let placeOfBirth, firstAppearance: String?
     let publisher: String?
     let alignment: Alignment
 }

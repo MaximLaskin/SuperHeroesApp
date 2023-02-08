@@ -10,14 +10,19 @@ import UIKit
 final class SuperHeroesListViewController: UITableViewController {
     // MARK: - Private Properties
     private var superHeroes: [Superhero] = []
+    private var activityIndicator: UIActivityIndicatorView?
 
     // MARK: - LifeCicle View
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
         view.backgroundColor = .black
+        activityIndicator = showSpinner(in: view)
         fetchSuperheroes()
 //        setupRefreshControl()
+
+       setupNavigationBar()
+
     }
 
     // MARK: - Table view data source
@@ -50,13 +55,36 @@ final class SuperHeroesListViewController: UITableViewController {
 //        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
 //        refreshControl?.addTarget(self, action: #selector(fetchSuperheroes), for: .valueChanged)
 //    }
+    private func setupNavigationBar() {
+        title = "SuperHeroes"
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundEffect = UIBlurEffect(style: .extraLight) // доработать?
+
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        navBarAppearance.backgroundColor = UIColor(
+            red: 31/255,
+            green: 101/255,
+            blue: 192/255,
+            alpha: 200/255
+        )
+
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+    }
 
      private func fetchSuperheroes() {
-        NetworkManager.shared.fetchData { result in
+        NetworkManager.shared.fetchData { [weak self] result in
             switch result {
             case .success(let superHeroes):
-                self.superHeroes = superHeroes
-                self.tableView.reloadData()
+                self?.superHeroes = superHeroes
+                self?.activityIndicator?.stopAnimating()
+                self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }

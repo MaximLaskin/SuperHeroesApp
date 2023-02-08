@@ -9,8 +9,9 @@
 import UIKit
 
 func showSpinner(in view: UIView) -> UIActivityIndicatorView {
-    let activityIndicator = UIActivityIndicatorView(style: .medium)
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     activityIndicator.color = .white
+    activityIndicator.startAnimating()
     activityIndicator.center = view.center
     activityIndicator.hidesWhenStopped = true
 

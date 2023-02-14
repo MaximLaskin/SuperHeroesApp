@@ -18,12 +18,18 @@ final class SuperHeroesListViewController: UITableViewController {
         tableView.rowHeight = 100
         view.backgroundColor = .black
         activityIndicator = showSpinner(in: view)
+        animateTableView()
         fetchSuperheroes()
-//        setupRefreshControl()
+        //        setupRefreshControl()
 
-       setupNavigationBar()
+        setupNavigationBar()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animateTableView()
 
     }
+
 
     // MARK: - Table view data source
     
@@ -31,6 +37,9 @@ final class SuperHeroesListViewController: UITableViewController {
         superHeroes.count
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        HeroTableViewCell().tableViewHeight
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HeroTableViewCell else { return UITableViewCell() }
 
@@ -88,6 +97,28 @@ final class SuperHeroesListViewController: UITableViewController {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+}
+
+extension SuperHeroesListViewController {
+    func animateTableView() {
+        tableView.reloadData()
+
+        let cell = tableView.visibleCells
+        let tableViewHight = tableView.bounds.height
+        var delay: Double = 0
+
+        for cell in cell {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHight)
+            UIView.animate(withDuration: 0.7,
+                           delay: delay * 0.05,
+                           options: .curveEaseInOut,
+                           animations: {
+                cell.transform = CGAffineTransform.identity
+            },
+                           completion: nil)
+            delay += 1
         }
     }
 }

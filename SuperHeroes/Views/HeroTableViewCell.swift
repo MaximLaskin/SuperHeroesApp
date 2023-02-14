@@ -21,6 +21,8 @@ final class HeroTableViewCell: UITableViewCell {
             heroImageView.backgroundColor = .black
         }
     }
+
+    var tableViewHeight: CGFloat = 80
     // MARK: - Private Properties
 
     private var activityIndicator: UIActivityIndicatorView?
@@ -34,6 +36,7 @@ final class HeroTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = .white
         activityIndicator = showSpinner(in: heroImageView)
     }
 

@@ -50,7 +50,8 @@ final class DetailsViewController: UIViewController {
     // MARK: - Networking
     private func fetchImage() {
         activityIndicator?.startAnimating()
-        NetworkManager.shared.fetchImage1(from: superHero.images.lg) { result in
+        guard let imageURL = URL(string: superHero.images.lg) else { return }
+        NetworkManager.shared.fetchImage(from: imageURL) { result in
             switch result {
             case .success(let data):
                 guard let image = UIImage(data: data) else { return }

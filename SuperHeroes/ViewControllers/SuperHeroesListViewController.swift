@@ -15,8 +15,7 @@ final class SuperHeroesListViewController: UITableViewController {
     // MARK: - LifeCicle View
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
-        view.backgroundColor = .black
+        view.backgroundColor = .red
         activityIndicator = showSpinner(in: view)
         animateTableView()
         fetchSuperheroes()
@@ -49,7 +48,6 @@ final class SuperHeroesListViewController: UITableViewController {
         return cell
     }
 
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,8 +55,6 @@ final class SuperHeroesListViewController: UITableViewController {
         guard let detailsVC = segue.destination as? DetailsViewController else { return }
         detailsVC.superHero = superHeroes[indexPath.row]
     }
-
-
 //    private func setupRefreshControl() {
 //        refreshControl = UIRefreshControl()
 //        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")

@@ -70,6 +70,7 @@ final class HeroTableViewCell: UITableViewCell {
             completion(.success(cachedImage))
             return
         }
+        
         NetworkManager.shared.fetchImage(from: url) { result in
             switch result {
             case .success(let data):

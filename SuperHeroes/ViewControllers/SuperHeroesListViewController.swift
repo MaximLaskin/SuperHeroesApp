@@ -17,9 +17,9 @@ final class SuperHeroesListViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         activityIndicator = showSpinner(in: view)
-        animateTableView()
+//        animateTableView()
         fetchSuperheroes()
-        //        setupRefreshControl()
+
 
         setupNavigationBar()
     }
@@ -27,6 +27,10 @@ final class SuperHeroesListViewController: UITableViewController {
         super.viewWillAppear(animated)
         animateTableView()
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        animateTableView()
     }
 
 
@@ -45,6 +49,19 @@ final class SuperHeroesListViewController: UITableViewController {
         let superHero = superHeroes[indexPath.row]
 
         cell.configure(with: superHero)
+        let tableViewHight = tableView.bounds.height
+        var delay: Double = 0
+        
+        cell.transform = CGAffineTransform(translationX: 0, y: tableViewHight)
+        UIView.animate(withDuration: 0.7,
+                       delay: delay * 0.05,
+                       options: .curveEaseInOut,
+                       animations: {
+            cell.transform = CGAffineTransform.identity
+        },
+                       completion: nil)
+        delay += 1
+
         return cell
     }
 

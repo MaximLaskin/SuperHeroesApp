@@ -14,5 +14,3 @@ SWIFT UIKit MVC.  В данном проекте реализован URLSession
 
 ![IMG_7478](https://user-images.githubusercontent.com/107308461/226176888-9b079053-098d-4691-b3d0-114de7672ede.gif)
 
-
-![RPReplay_Final1678716682](https://user-images.githubusercontent.com/107308461/226168519-512f9b40-59e1-4280-a4a8-6ee8a4e76671.gif)
